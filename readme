@@ -1,5 +1,62 @@
-Hey Guys This is Most Awaited kernel For Lg optimus me P350 It is Most fastest kernel Source.First it Was unstable But Now it is Fully working..........
+Hey Guys This is Most Awaited kernel For Lg optimus me P350 It is Most fastest kernel Source.First it Was unstable But Now it is Fully working......
 
 
+How to Compile it : 
 
-GUYS UPDATED README ME COMING TODAY MIDNGNT WITH EASY STEPS 
+First We Will Install Some Dependies : 
+
+32 bit and 64 bit Systems : 
+
+git-core gnupg sun-java6-jdk flex bison gperf libsdl-dev libesd0-dev libwxgtk2.6-dev build-essential zip curl libncurses5-dev zlib1g-dev
+
+64 bit Only : 
+
+ia32-libs lib32z1-dev lib32ncurses5-dev gcc-multilib g++-multilib
+
+
+Now We will Set up Repo :
+
+mkdir -p ~/bin
+PATH=~/bin:$PATH
+curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo > ~/bin/repo
+chmod a+x ~/bin/repo
+
+
+Now Your Computer is Ready For Compiling Kernel !!!!!!!!
+
+mkdir kernel
+cd kernel
+git clone git@github.com:teampecan/2.6.35-kernel-for-lg-optimus-me-.git
+
+
+Now you are Having the Sources For Kernel 
+
+
+Now Compiling starts :
+cd kernel
+export ARCH=arm
+export CROSS_COMPILE=path_of_compiler    For example : export CROSS_COMPILE=../prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin/arm-eabi    ( Notice ) This is Example You need To Set Tool chain Path According to your Toolchain Path 
+
+If you don't have toolchain get it from here : ( Link im still Uploading it )
+
+How to Set Toolchain : 
+
+Download File From Following Given Link 
+Now Extract it To your Home directory 
+
+
+Now We can Start Compiling : 
+
+cd kernel
+export ARCH=arm
+export CROSS_COMPILE=../arm-eabi-4.4.0/bin/arm-eabi
+
+Now your Toolchain is ready : 
+
+now if u want to make any changes 
+
+make menuconfig ( do changes if u want and save it )
+make -j3 ( i had done -j3 as im having i3 cpu change it according to ur pc ) 
+
+Now your Kernel is Compiled Enjoy Guys !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
